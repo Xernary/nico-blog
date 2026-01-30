@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nico&#39;s Security Research</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Nico&#39;s Security Research</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discovering and Chaining Vulnerabilities in a TP-Link Range Extender (CVE-2025-15545) — A Research Walkthrough</title>
+      <link>http://localhost:1313/posts/cve-2025-15545/</link>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/cve-2025-15545/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+&lt;p&gt;During the research process on the TP-Link Archer RE605X range extender, multiple security issues were identified. &lt;/br&gt;
+An initial weakness in the control panel authentication mechanism allows an adjacent unauthenticated attacker to intercept session cookies and CSRF tokens of an active user and reuse them to gain administrative access to the device. This issue is described as an additional finding observed during the research and is not included in the official CVE advisory. &lt;/br&gt;
+In addition, two vulnerabilities affecting the firmware backup and restore functionality were discovered. The use of hardcoded cryptographic keys allows authenticated attackers to decrypt, modify, and re-encrypt configuration files, leading to sensitive information disclosure and configuration tampering. Furthermore, insufficient validation of XML tags during configuration parsing allows authenticated attackers to achieve remote code execution as root on the device. These issues are covered by CVE-2025-15545.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;div class=&#34;about-wrap&#34;&gt;
+&lt;h1 class=&#34;about-name&#34;&gt;Nicola Giuffrida&lt;/h1&gt;
+&lt;p&gt;Hi, I&amp;rsquo;m Nico.&lt;/p&gt;
+&lt;p&gt;I hold a degree in Computer Science, I’m into security research and have a strong passion for cybersecurity.&lt;br&gt;
+I actively participate in CTF competitions and focus on vulnerability research, reverse engineering, and embedded / IoT devices.
+This blog is where I publish my technical writeups, vulnerability analyses, and research notes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&#34;about-icons&#34;&gt;
+  &lt;a class=&#34;about-icon&#34; href=&#34;https://github.com/Xernary&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;GitHub&#34;&gt;
+    &lt;!-- GitHub icon --&gt;
+    &lt;svg viewBox=&#34;0 0 24 24&#34; width=&#34;22&#34; height=&#34;22&#34; fill=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;
+      &lt;path d=&#34;M12 .5C5.73.5.75 5.48.75 11.75c0 4.86 3.16 8.98 7.54 10.44.55.1.75-.24.75-.53v-1.9c-3.07.67-3.72-1.32-3.72-1.32-.5-1.27-1.22-1.6-1.22-1.6-.99-.68.07-.67.07-.67 1.1.08 1.68 1.13 1.68 1.13.97 1.67 2.55 1.19 3.17.9.1-.7.38-1.19.68-1.46-2.45-.28-5.02-1.22-5.02-5.42 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.41.11-2.94 0 0 .92-.29 3.02 1.13a10.5 10.5 0 0 1 5.5 0c2.1-1.42 3.02-1.13 3.02-1.13.6 1.53.22 2.66.11 2.94.7.77 1.13 1.75 1.13 2.95 0 4.21-2.58 5.14-5.04 5.41.39.34.73 1.01.73 2.03v3c0 .29.2.63.76.52 4.37-1.46 7.53-5.58 7.53-10.44C23.25 5.48 18.27.5 12 .5z&#34;/&gt;
+    &lt;/svg&gt;
+  &lt;/a&gt;
+  &lt;a class=&#34;about-icon&#34; href=&#34;https://www.linkedin.com/in/nicolagiuffrida&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;LinkedIn&#34;&gt;
+    &lt;!-- LinkedIn icon --&gt;
+    &lt;svg viewBox=&#34;0 0 24 24&#34; width=&#34;22&#34; height=&#34;22&#34; fill=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;
+      &lt;path d=&#34;M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zM8.5 8h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-7.7c0-1.84-.03-4.2-2.56-4.2-2.56 0-2.95 2-2.95 4.07V23h-4V8z&#34;/&gt;
+    &lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,94 @@
+/* =========================================================
+   PaperMod – Table of Contents a lato (anche del titolo)
+   Richiede single.html con:
+   - <div class="pm-article-grid">
+   - <div class="pm-article-body">...</div>
+   - <aside class="pm-toc">...</aside>
+   ========================================================= */
+
+/* Desktop / schermi larghi */
+@media (min-width: 1200px) {
+
+  /* Allarga il contenitore principale nelle pagine single */
+  body.single {
+    --main-width: 1200px; /* puoi alzare a 1300/1400 */
+  }
+
+  /* Griglia: body (sx) + toc (dx) */
+  .post-single.has-toc .pm-article-grid{
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 320px !important;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* Colonna sinistra */
+  .post-single.has-toc .pm-article-body{
+    min-width: 0; /* evita overflow */
+  }
+
+  /* Colonna destra (sticky TOC) */
+  .post-single.has-toc .pm-toc{
+    position: sticky !important;
+    top: calc(var(--header-height, 4.5rem) + 1rem) !important;
+    max-height: calc(100vh - (var(--header-height, 4.5rem) + 2rem)) !important;
+    overflow-y: auto !important;
+  }
+
+  /* PaperMod TOC è un <details class="toc"> */
+  .post-single.has-toc .pm-toc details.toc{
+    margin: 0 !important;
+    width: 100% !important;
+
+    /* (facoltativo) evita che PaperMod lo “spinga” verso il basso */
+    padding-top: 0 !important;
+  }
+}
+
+/* Mobile / tablet: TOC sotto (default ok) */
+@media (max-width: 1199px){
+  .post-single.has-toc .pm-article-grid{
+    display: block !important;
+  }
+
+  .post-single.has-toc .pm-toc{
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+/* Offset per anchor links (TOC): evita che i titoli finiscano sotto la top bar */
+.post-single {
+  --anchor-offset: calc(var(--header-height, 4.5rem) + 1rem);
+}
+
+/* Applica l’offset ai titoli (quelli che hanno id e vengono linkati dal TOC) */
+.post-single :is(h1, h2, h3, h4, h5, h6)[id]{
+  scroll-margin-top: var(--anchor-offset);
+}
+
+/* (Extra) migliora anche lo scroll quando si usa il browser "scroll to" */
+html{
+  scroll-padding-top: var(--anchor-offset);
+}
+
+/* Remove bullets from Table of Contents */
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc li {
+  margin-left: 0;
+}
+/* Increase spacing between TOC items */
+.toc li {
+  margin: 0.35rem 0;
+}
+
+/* Reduce TOC font size */
+.toc {
+  font-size: 0.85rem;
+}
+

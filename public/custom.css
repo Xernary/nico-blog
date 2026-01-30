@@ -1,0 +1,110 @@
+:root{
+  --accent: #9AB9F6;
+  --accent-soft-bg: rgba(154, 185, 246, 0.12);
+  --accent-soft-border: rgba(154, 185, 246, 0.28);
+}
+
+/* Link */
+.markdown a, article a, .prose a, #content a {
+  color: var(--accent);
+}
+.markdown a:hover, article a:hover, .prose a:hover, #content a:hover {
+  text-decoration: underline;
+}
+
+/* Inline code tra `...` (ma NON nei code block) */
+.markdown :not(pre) > code,
+article :not(pre) > code,
+.prose :not(pre) > code,
+#content :not(pre) > code {
+  color: var(--accent);
+  background: var(--accent-soft-bg);
+  border: 1px solid var(--accent-soft-border);
+  padding: 0.12em 0.35em;
+  border-radius: 0.35rem;
+}
+
+/* Blocchi di codice ``` ``` */
+.markdown pre, article pre, .prose pre, #content pre {
+  background: rgba(154, 185, 246, 0.10);
+  border: 1px solid rgba(154, 185, 246, 0.18);
+  border-radius: 0.6rem;
+  padding: 1rem;
+  overflow: auto;
+}
+.markdown pre code, article pre code, .prose pre code, #content pre code {
+  color: rgba(255,255,255,0.92);
+}
+
+/* Layout 2 colonne solo su schermi larghi */
+.pm-content-with-toc{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Sidebar TOC */
+.pm-toc{
+  position: sticky;
+  top: 1.25rem;
+  max-height: calc(100vh - 2.5rem);
+  overflow: auto;
+}
+
+/* Il partial toc.html di PaperMod genera un wrapper con classe .toc */
+.pm-toc .toc{
+  margin: 0;               /* PaperMod di solito mette margini */
+}
+
+/* Mobile: TOC torna sotto (o dove preferisci) */
+@media (max-width: 1000px){
+  .pm-content-with-toc{
+    grid-template-columns: 1fr;
+  }
+  .pm-toc{
+    position: static;
+    max-height: none;
+  }
+}
+
+/* ===== PaperMod: TOC a destra (desktop) ===== */
+@media (min-width: 1200px){
+
+  /* allarga il "foglio" del post SOLO quando c’è il TOC */
+  .post-single.has-toc{
+    max-width: 1200px; /* aumenta/diminuisci se vuoi */
+  }
+
+  .post-single.has-toc .pm-content-with-toc{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .post-single.has-toc .pm-toc{
+    position: sticky;
+    top: 1.25rem;
+    max-height: calc(100vh - 2.5rem);
+    overflow: auto;
+  }
+
+  /* PaperMod genera un <details class="toc">: forza la larghezza */
+  .post-single.has-toc .pm-toc .toc{
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Mobile / schermi stretti: TOC sotto (default ok) */
+@media (max-width: 1199px){
+  .pm-content-with-toc{
+    display: block;
+  }
+  .pm-toc{
+    position: static;
+    max-height: none;
+  }
+}
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>#IoT on Nico&#39;s Security Research</title>
+    <link>http://localhost:1313/tags/%23iot/</link>
+    <description>Recent content in #IoT on Nico&#39;s Security Research</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%23iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discovering and Chaining Vulnerabilities in a TP-Link Range Extender (CVE-2025-15545) — A Research Walkthrough</title>
+      <link>http://localhost:1313/posts/cve-2025-15545/</link>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/cve-2025-15545/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+&lt;p&gt;During the research process on the TP-Link Archer RE605X range extender, multiple security issues were identified. &lt;/br&gt;
+An initial weakness in the control panel authentication mechanism allows an adjacent unauthenticated attacker to intercept session cookies and CSRF tokens of an active user and reuse them to gain administrative access to the device. This issue is described as an additional finding observed during the research and is not included in the official CVE advisory. &lt;/br&gt;
+In addition, two vulnerabilities affecting the firmware backup and restore functionality were discovered. The use of hardcoded cryptographic keys allows authenticated attackers to decrypt, modify, and re-encrypt configuration files, leading to sensitive information disclosure and configuration tampering. Furthermore, insufficient validation of XML tags during configuration parsing allows authenticated attackers to achieve remote code execution as root on the device. These issues are covered by CVE-2025-15545.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

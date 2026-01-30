@@ -1,0 +1,164 @@
+/* Wider main content for long writeups */
+.main {
+  max-width: 1600px;   /* prova 900–1100 */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+/* Full-width top navigation */
+.nav {
+  max-width: none;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Sticky top navigation */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* Subtle bottom border for header */
+.header {
+  border-bottom: 1px solid var(--border);
+}
+
+.header {
+  background: var(--theme);
+}
+
+/* Reduce horizontal padding of top nav */
+.nav {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+/* Make site title in header more minimal */
+.logo a {
+  font-size: 1rem;      /* default ~1.25rem */
+  font-weight: 400;     /* meno “pesante” */
+}
+
+/* ABOUT PAGE */
+
+/* About page layout */
+.about-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/*.about-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.about-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--primary);
+  background: var(--entry);
+}
+
+.about-icon:hover {
+  transform: translateY(-1px);
+}*/
+
+/* About icons: flat, rounded-square */
+.about-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.about-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;          /* <-- rounded square */
+  background: transparent;       /* <-- flat (no 3D) */
+  color: var(--primary);
+
+  box-shadow: none !important;   /* <-- remove any shadow */
+  transform: none !important;    /* <-- remove lift effect */
+  transition: background 120ms ease, border-color 120ms ease, opacity 120ms ease;
+}
+
+.about-icon:hover {
+  background: var(--entry);      /* subtle hover, still flat */
+  border-color: var(--tertiary);
+  opacity: 0.95;
+}
+
+.about-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+
+/* Narrower body ONLY on list pages (home + /posts/) */
+body.list .main {
+  max-width: 1000px;  /* prova 780–980 */
+  margin: 0 auto;
+}
+
+/* Optional: make the post cards fit nicely */
+body.list .main .post-entry,
+body.list .main .first-entry {
+  max-width: 100%;
+}
+/* -------------------------------------------------------*/
+
+/* CVE BOX TAG */
+.cve-badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--accent);
+  background: var(--code-bg);
+  /*border: 1px solid var(--accent);*/
+  border-radius: 6px;
+}
+
+
+.cve-badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #ffb4b4;
+  background: rgba(255, 80, 80, 0.18);
+  border-radius: 6px;
+}
+
+/* Increase indentation for lists */
+.post-content ul,
+.post-content ol {
+  padding-left: 3em;   /* default ~1.2em */
+  margin-left: 0;
+}
+

@@ -1,0 +1,105 @@
+/* Slate Light */
+:root {
+  --theme: #f9fafb;
+  --entry: #ffffff;
+
+  --primary: #111827;
+  --content: #1f2937;
+  --secondary: #4b5563;
+  --secondary: #AAAABB;
+  --tertiary: #e5e7eb;
+
+  --hljs-bg: #f3f4f6;
+  --code-bg: #243158;
+
+  --border: #e5e7eb;
+
+  --accent: #3b5ccc;                 /* blue più profondo */
+  --accent: #FFFFFF;                 /* blue più profondo */
+  --accent-soft-bg: rgba(59, 92, 204, 0.10);
+  --accent-soft-border: rgba(59, 92, 204, 0.25);
+}
+
+/* Slate Dark */
+:root[data-theme="dark"] {
+  --theme: #0b1220;
+  --entry: #111827;
+  --entry: #111827;
+
+  --primary: #e5e7eb;
+  --content: #d1d5db;
+  --secondary: #9ca3af;
+  --tertiary: #1f2937;
+
+  --hljs-bg: #020617;
+  --code-bg: #162033;
+
+  --border: #1f2937;
+
+  --accent: #9AB9F6;                /* azzurro acceso */
+  --accent-soft-bg: rgba(154, 185, 246, 0.12);
+  --accent-soft-border: rgba(154, 185, 246, 0.28);
+}
+
+.post-content code {
+  border-radius: 4px;
+}
+
+.post-content pre {
+  border-radius: 6px;
+}
+
+:root{
+}
+
+/* Link */
+.markdown a,
+article a,
+.prose a {
+  color: var(--accent);
+}
+
+/* Hover link */
+.markdown a:hover,
+article a:hover,
+.prose a:hover {
+  text-decoration: underline;
+}
+
+/* Footer author link override (PaperMod) */
+/* Footer: remove any underline styling (text-decoration OR fake underline) */
+footer.footer a.footer-author,
+footer.footer a.footer-author:link,
+footer.footer a.footer-author:visited,
+footer.footer a.footer-author:hover,
+footer.footer a.footer-author:active {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+.footer a,
+.footer a:link,
+.footer a:visited,
+.footer a:hover,
+.footer a:active {
+  text-decoration: none !important;
+}
+
+/* Style only the author link */
+.footer a.footer-author {
+  color: var(--primary) !important;
+}
+
+/* Text selection */
+::selection {
+  background: rgba(154, 185, 246, 0.30); /* colore selezione */
+  color: #ffffff;                        /* colore testo selezionato */
+}
+
+::-moz-selection { /* Firefox */
+  background: rgba(154, 185, 246, 0.30);
+  color: #ffffff;
+}
+

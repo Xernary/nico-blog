@@ -1,0 +1,42 @@
+/* Inline code (solo quello NON dentro <pre>) */
+.markdown :not(pre) > code,
+article :not(pre) > code,
+.prose :not(pre) > code {
+  color: var(--accent);
+  background: var(--accent-soft-bg);
+  border: 1px solid var(--accent-soft-border);
+  border: none;
+  padding: 0.12em 0.35em;
+  border-radius: 0.35rem;
+}
+
+/*----------------------------------------------------*/
+
+/* Code blocks (non-inline): force background */
+.highlight pre,
+pre.chroma,
+.chroma,
+pre {
+  background: var(--code-bg) !important; /* scegli il tuo colore */
+}
+.highlight pre code,
+pre.chroma code {
+  background: transparent !important;
+}
+/* Code block (non-inline) font size */
+.highlight pre,
+pre.chroma,
+pre,
+pre code {
+  font-size: 1rem;      /* prova 0.85–0.95 */
+  font-size-adjust: 0.52; /* valore ideale per Fira Code / JetBrains Mono */
+}
+/* Code block padding */
+.highlight pre,
+pre.chroma,
+pre {
+  padding: 0.7em 1em;   /* verticale | orizzontale */
+  padding: 1em 0.7em;   /* verticale | orizzontale */
+}
+
+

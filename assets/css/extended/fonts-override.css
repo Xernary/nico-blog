@@ -1,0 +1,66 @@
+
+/* new fonts */
+
+/* Body */
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: "Montserrat", "Inter", sans-serif;
+  font-weight: 600;
+}
+
+/* Code blocks, inline code, CVE badge */
+pre, code, .cve-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+  font-feature-settings: "zero";
+  font-variant-numeric: slashed-zero;
+}
+
+/* Code blocks (all variants) */
+pre,
+pre code,
+.highlight pre,
+pre.chroma,
+.chroma code {
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   Inter Variable (Body text)
+   =============================== */
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/InterVariable.woff2") format("woff2");
+  font-weight: 100 900;   /* variable font range */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===============================
+   Montserrat Medium (Headings)
+   =============================== */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===============================
+   JetBrains Mono Medium (Code)
+   =============================== */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
