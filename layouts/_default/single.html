@@ -10,7 +10,12 @@
       <header class="post-header">
         {{ partial "breadcrumbs.html" . }}
         {{ with .Params.cve }}
-        <div class="cve-badge">{{ . }}</div>
+        <a href="https://www.cve.org/cverecord?id={{ . }}"
+              class="cve-link"
+              target="_blank"
+              rel="noopener noreferrer">
+             <div class="cve-badge">{{ . }}</div>
+           </a>
         {{ end }}
         <h1 class="post-title entry-hint-parent">
           {{ .Title }}

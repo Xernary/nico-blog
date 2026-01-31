@@ -162,3 +162,8 @@ body.list .main .first-entry {
   margin-left: 0;
 }
 
+.cve-link:hover .cve-badge {
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
