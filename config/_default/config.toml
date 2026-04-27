@@ -2,6 +2,9 @@ languageCode = "en-us"
 title = "Nico's Security Research"
 theme = "PaperMod"
 
+[author]
+  name = "Nico"
+
 [params]
   defaultTheme = "dark"
   disableThemeToggle = true
