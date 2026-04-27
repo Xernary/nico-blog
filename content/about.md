@@ -11,7 +11,7 @@ showReadingTime: false
 
 Hi, I'm Nico.
 
-I hold a degree in Computer Science, I’m into security research and have a strong passion for cybersecurity.  
+I'm a Penetration Tester @ Hacktive Security, I hold a degree in Computer Science and I’m into security research.  
 I actively participate in CTF competitions and focus on vulnerability research, reverse engineering, and embedded / IoT devices.
 This blog is where I publish my technical writeups, vulnerability analyses, and research notes.
 
