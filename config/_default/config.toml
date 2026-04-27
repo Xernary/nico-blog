@@ -12,7 +12,8 @@ theme = "PaperMod"
   TocOpen = true
   ShowReadingTime = true
   customCSS = ["css/extended/custom.css"]
-  hideFooter = false 
+  hideFooter = false
+  author = "Nico"
 
 [menu]
   [[menu.main]]
